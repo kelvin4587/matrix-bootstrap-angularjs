@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=Edge">
+    <title>Title</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- In-document CSS -->
+    <style>
+        /* ... */
+    </style>
+    <!-- JavaScript -->
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+<runoob-directive></runoob-directive>
+<div runoob-directive></div>
+<div class="runoob-directive"></div>
+<!--runoob-directive-->
+<script>
+    var app =  angular.module("myApp",[]);
+    app.directive("runoobDirective",function () {
+        return {
+            restrict: "EACM",
+            template : "<h1>自定义指令!</h1>"
+        };
+    });
+</script>
+</body>
+</html>

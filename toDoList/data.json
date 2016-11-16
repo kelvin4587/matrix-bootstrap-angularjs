@@ -1,0 +1,58 @@
+[
+  {
+    "level": 1,
+    "checked":false,
+    "menuName": "菜单1",
+    "createDate": {},
+    "type": 1,
+    "position": {"head":true,"left":false,"footer":true}
+  },
+  {
+    "level": 2,
+    "checked":false,
+    "menuName": "菜单2",
+    "createDate": {},
+    "type": 1,
+    "position": {"head":true,"left":false,"footer":true}
+  },
+  {
+    "level": 3,
+    "checked":false,
+    "menuName": "菜单3",
+    "createDate": {},
+    "type": 1,
+    "position": {"head":true,"left":false,"footer":true}
+  },
+  {
+    "level": 4,
+    "checked":false,
+    "menuName": "菜单4",
+    "createDate": {},
+    "type": 1,
+    "position": {"head":true,"left":false,"footer":true}
+  },
+  {
+    "level": 4,
+    "checked":false,
+    "menuName": "菜单5",
+    "createDate": {},
+    "type": 1,
+    "position": {"head":true,"left":false,"footer":true}
+  },
+  {
+    "level": 3,
+    "checked":false,
+    "menuName": "菜单6",
+    "createDate": {},
+    "type": 1,
+    "position": {"head":true,"left":false,"footer":true}
+  },
+  {
+    "level": 2,
+    "checked":false,
+    "menuName": "菜单7",
+    "createDate": {},
+    "type": 1,
+    "position": {"head":true,"left":false,"footer":true}
+  }
+]
