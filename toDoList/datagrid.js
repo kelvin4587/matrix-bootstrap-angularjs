@@ -94,6 +94,24 @@ angular.module('datagrid', ['ui.bootstrap'])
             $scope.options = options;
             $scope.editMenu = editMenu;
             $scope.dateOptions = dateOptions;
+            $scope.canSave = function () {
+                if ($scope.editMenu.menuName == '') {
+                    return false;
+                } else if ($scope.editMenu.menuName) {
+                    return true;
+                } else {
+                    return false;
+                }
+            };
+            $scope.showError = function () {
+                if ($scope.editMenu.menuName == '') {
+                    return true;
+                } else if ($scope.editMenu.menuName) {
+                    return false;
+                } else {
+                    return true;
+                }
+            };
             $scope.ok = function () {
                 $modalInstance.close($scope.editMenu);
             };

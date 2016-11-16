@@ -3,7 +3,7 @@
     <h3>新建窗口</h3>
 </div>
 <div class="modal-body">
-    <form class="form-horizontal" novalidate>
+    <form class="form-horizontal" novalidate name="menuForm">
         <div class="control-group">
             <label class="control-label">菜单类别</label>
             <div class="controls">
@@ -25,7 +25,7 @@
                     <input type="checkbox" ng-model="editMenu.position.left"/>
                     左边</label>
                 <label class="checkbox inline">
-                    <input type="checkbox" ng-model="editMenu.position.footer"/>
+                    <input type="checkbox" ng-model="editMenu.position.footer" />
                     底部</label>
             </div>
         </div>
@@ -42,8 +42,9 @@
         <div class="control-group">
             <label class="control-label">菜单名</label>
             <div class="controls">
-                <input type="text" ng-model="editMenu.menuName" required/>
+                <input type="text" ng-model="editMenu.menuName"/>
             </div>
+            <span ng-show="showError()" class="help-inline">菜单名必须输入</span>
         </div>
         <div class="control-group">
             <label class="control-label">生成时间</label>
@@ -62,6 +63,6 @@
     </form>
 </div>
 <div class="modal-footer">
-    <button class="btn btn-primary" ng-click="ok()">确定</button>
+    <button class="btn btn-primary" ng-click="ok()" ng-disabled="!canSave()">确定</button>
     <button class="btn btn-warning" ng-click="cancel()">取消</button>
 </div>
