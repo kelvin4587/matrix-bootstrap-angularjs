@@ -42,42 +42,7 @@ angular.module('datagrid', ['ui.bootstrap'])
             {name: '三层', value: 3},
             {name: '四层', value: 4}];
         $scope.editMenu = {};
-        $scope.openDialog = function (method, menu) {
-            var templateName;
-            if (method) {
-                if (method == 'add') {
-                    clearEditForm();
-                }
-                templateName = method + 'Content.html';
-            } else {
-                templateName = 'viewContent.html';
-            }
-            if (menu) {
-                var clonedMenu = angular.copy(menu);
-                $scope.editMenu = clonedMenu;
-            }
-            var modalInstance = $modal.open({
-                templateUrl: templateName,
-                controller: ModalInstanceCtrl,
-                resolve: {
-                    options: function () {
-                        return $scope.options;
-                    },
-                    editMenu: function () {
-                        return $scope.editMenu;
-                    },
-                    dateOptions: function () {
-                        return $scope.dateOptions;
-                    }
-
-                }
-            });
-            modalInstance.result.then(function (editMenu) {
-                addMenu(editMenu);
-                $log.info('Modal ok at: ' + new Date());
-            }, function () {
-                $log.info('Modal dismissed at: ' + new Date());
-            });
+        $scope.openDialog = function () {
         };
         $scope.deleteDialog = function () {
             var modalInstance = $modal.open({
@@ -89,36 +54,6 @@ angular.module('datagrid', ['ui.bootstrap'])
             }, function () {
 
             });
-        };
-        var ModalInstanceCtrl = function ($scope, $modalInstance, options, editMenu, dateOptions) {
-            $scope.options = options;
-            $scope.editMenu = editMenu;
-            $scope.dateOptions = dateOptions;
-            $scope.canSave = function () {
-                if ($scope.editMenu.menuName == '') {
-                    return false;
-                } else if ($scope.editMenu.menuName) {
-                    return true;
-                } else {
-                    return false;
-                }
-            };
-            $scope.showError = function () {
-                if ($scope.editMenu.menuName == '') {
-                    return true;
-                } else if ($scope.editMenu.menuName) {
-                    return false;
-                } else {
-                    return true;
-                }
-            };
-            $scope.ok = function () {
-                $modalInstance.close($scope.editMenu);
-            };
-
-            $scope.cancel = function () {
-                $modalInstance.dismiss('cancel');
-            };
         };
         var confirmModalCtrl = function ($scope, $modalInstance) {
             $scope.ok = function () {
@@ -204,3 +139,4 @@ angular.module('datagrid', ['ui.bootstrap'])
         return result;
     };
 });
+;
