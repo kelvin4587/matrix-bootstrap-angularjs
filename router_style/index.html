@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="location_and_include">
+<head>
+    <meta charset="utf-8">
+    <link href="../bs2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../js/angularjs/angular.js"></script>
+    <script src="location_and_include.js"></script>
+</head>
+<body ng-controller="NavigationCtrl">
+<div class="navbar">
+    <div class="navbar-inner">
+        <ul class="nav nav-tabs">
+            <li><a href="#/admin/users/list">List users</a></li>
+            <li><a href="#/admin/users/new">New user</a></li>
+        </ul>
+    </div>
+</div>
+<div class="container-fluid" ng-include="selectedRoute.templateUrl">
+    <!-- Route-dependent content goes here -->
+</div>
+</body>
+</html>

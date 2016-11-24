@@ -1,0 +1,16 @@
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.center-checkbox {
+    text-align: center !important;
+}
+.label-open {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.line-open {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}

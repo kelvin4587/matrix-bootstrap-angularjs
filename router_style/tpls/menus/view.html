@@ -1,0 +1,204 @@
+<div ng-controller="NewMenuCtrl">
+    <div class="widget-box">
+        <div class="widget-title"><span class="icon"> <i class="icon-align-justify"></i> </span>
+            <h5>基本信息</h5>
+        </div>
+        <div class="widget-content nopadding">
+            <form class="form-horizontal" novalidate name="menuForm">
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label">编号</label>
+                            <div class="controls">
+                                <input type="text" placeholder="编号"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label">编号</label>
+                            <div class="controls">
+                                <input type="text" placeholder="编号"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label">编号</label>
+                            <div class="controls">
+                                <input type="text" placeholder="编号"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label">编号</label>
+                            <div class="controls">
+                                <input type="text" placeholder="编号"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label">编号</label>
+                            <div class="controls">
+                                <input type="text" placeholder="编号"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label">编号</label>
+                            <div class="controls">
+                                <input type="text" placeholder="编号"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label">编号</label>
+                            <div class="controls">
+                                <input type="text" placeholder="编号"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label">编号</label>
+                            <div class="controls">
+                                <input type="text" placeholder="编号"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div class="control-group">
+                            <label class="control-label">描述</label>
+                            <div class="controls">
+                                <textarea class="span11"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div class="control-group">
+                            <div class="controls center-block">
+                                <button class="btn btn-primary" ng-click="newMenu()" ng-disabled="!canSave()">确定
+                                </button>
+                                <button class="btn btn-warning" ng-click="clearForm()">取消</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="widget-box">
+        <div class="widget-title"><span class="icon"> <i class="icon-align-justify"></i> </span>
+            <h5>不良信息</h5>
+        </div>
+        <div class="widget-content nopadding">
+            <form class="form-horizontal" novalidate name="menuForm">
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label">编号</label>
+                            <div class="controls">
+                                <input type="text" placeholder="编号"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label">编号</label>
+                            <div class="controls">
+                                <input type="text" placeholder="编号"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div class="control-group">
+                            <div class="controls center-block">
+                                <button class="btn btn-primary" ng-click="newMenu()" ng-disabled="!canSave()">检索
+                                </button>
+                                <button class="btn btn-warning" ng-click="clearForm()">重置</button>
+                                <button class="btn btn-danger" ng-click="clearForm()">添加</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="pagination">
+                <span class="pull-left">列表信息</span>
+                <ul class="pull-right">
+                    <li><a ng-click="previousActivePage()">上一页</a></li>
+                    <li><a ng-click="setActivePage(page)">1</a></li>
+                    <li><a ng-click="nextActivePage()">下一页</a></li>
+                </ul>
+            </div>
+            <div>
+                <table class="table table-bordered data-table">
+                    <thead>
+                    <tr class="">
+                        <th>
+                            <input type="checkbox"/>
+                        </th>
+                        <th>编号</th>
+                        <th>名称</th>
+                        <th>描述</th>
+                        <th>类型</th>
+                        <th>产品</th>
+                        <th>创建时间</th>
+                        <th>创建人</th>
+                        <th>更新时间</th>
+                        <th>更新人</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="center-checkbox">
+                            <input type="checkbox"/>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="widget-box">
+        <div class="widget-title"><span class="icon"> <i class="icon-align-justify"></i> </span>
+            <h5>不良信息</h5>
+        </div>
+        <div class="widget-content nopadding">
+            <form class="form-horizontal">
+            <div class="row-fluid">
+                <div class="control-group">
+                    <label class="control-label">描述</label>
+                    <div class="controls">
+                        <textarea class="span11"></textarea>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
