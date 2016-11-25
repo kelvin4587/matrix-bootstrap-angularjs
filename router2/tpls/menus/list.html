@@ -1,0 +1,51 @@
+<div class="row-fluid" ng-controller="ListMenusCtrl">
+    <div class="span12">
+        <div class="panel panel-default ">
+            <!-- Default panel contents -->
+            <div class="panel-heading clearfix">
+                <div class="pull-left">
+                    <button class="btn btn-success" ng-click="newTab()">新建
+                    </button>
+                    <button class="btn btn-danger" ng-click="deleteDialog()">删除
+                    </button>
+                </div>
+            </div>
+            <table id="List" class="table table-bordered table-hover">
+                <thead>
+                <tr class="">
+                    <td class="text-center">
+                        <input type="checkbox" ng-click="checkAll()"/></td>
+                    <td class="text-center">菜单类别</td>
+                    <td>菜单展示区域</td>
+                    <td>菜单层级</td>
+                    <td>菜单名</td>
+                    <td>菜单生成时间</td>
+                    <td class="col-lg-3">操作</td>
+                </tr>
+                </thead>
+                <tbody class="">
+                <tr ng-repeat="menu in filteredMenus = menus | pagination:pageNo:pageSize">
+                    <td class="text-center">
+                        <input type="checkbox" ng-model="menu.checked"/></td>
+                    <td class="text-center">{{menu.type|parentOrChild}}</td>
+                    <td>{{menu.position}}</td>
+                    <td>{{menu.level|level}}</td>
+                    <td>{{menu.menuName}}</td>
+                    <td>{{menu.createDate|date : 'yyyy-MM-dd'}}</td>
+                    <td>
+                        <button class="btn  btn-xs btn-info" ng-click="openDialog(menu)">详情
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="pagination">
+                <ul>
+                    <li><a ng-click="previousActivePage()">Prev</a></li>
+                    <li ng-repeat="page in pages"><a ng-click="setActivePage(page)">{{page+1}}</a></li>
+                    <li><a ng-click="nextActivePage()">Next</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
